@@ -60,4 +60,3 @@ volumes:
 networks:
   local-network:
     driver: bridge
-    external: true
