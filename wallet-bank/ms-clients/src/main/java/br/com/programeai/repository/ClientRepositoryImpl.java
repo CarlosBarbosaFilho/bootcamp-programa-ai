@@ -1,37 +1,31 @@
 package br.com.programeai.repository;
 
+
 import br.com.programeai.model.Client;
+import br.com.programeai.model.StatusClient;
+import org.springframework.stereotype.Service;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
+import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
+@Service
 public class ClientRepositoryImpl implements ClientRepository{
-    @Override
+    private final DynamoDbTable<Client> clientTable;
+
+    public ClientRepositoryImpl(DynamoDbEnhancedClient enhancedClient) {
+        this.clientTable = enhancedClient.table("client", TableSchema.fromBean(Client.class));
+    }
+
     public Client save(Client client) {
-        return null;
+        client.setId(System.currentTimeMillis());
+        client.setCreatedAt(LocalDateTime.now());
+        client.setStatus(StatusClient.ACTIVE);
+        clientTable.putItem(client);
+        return client;
     }
 
-    @Override
-    public List<Client> list() {
-        return List.of();
-    }
 
-    @Override
-    public Client getClient(Long id) {
-        return null;
-    }
 
-    @Override
-    public void deleteClient(Long id) {
-
-    }
-
-    @Override
-    public List<Client> findByEmail(String email) {
-        return List.of();
-    }
-
-    @Override
-    public List<Client> findByDocument(String document) {
-        return List.of();
-    }
 }

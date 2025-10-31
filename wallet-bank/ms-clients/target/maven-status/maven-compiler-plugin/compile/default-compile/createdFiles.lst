@@ -1,0 +1,5 @@
+br\com\programeai\ApplicationClientService.class
+br\com\programeai\model\Client.class
+br\com\programeai\model\StatusClient.class
+br\com\programeai\repository\ClientRepository.class
+br\com\programeai\repository\ClientRepositoryImpl.class
