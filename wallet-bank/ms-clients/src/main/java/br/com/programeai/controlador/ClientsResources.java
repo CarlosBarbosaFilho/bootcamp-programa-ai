@@ -22,9 +22,9 @@ public interface ClientsResources {
 //    @GetMapping("/email/{email}")
 //    ClientResponse getClientEmail(@PathVariable("email") String email);
 //
-//    @GetMapping("/document/{document}")
-//    ClientResponse getClientDocument(@PathVariable("document") String document);
-//
+    @GetMapping("/document/{document}")
+    ClientResponse getClientDocument(@PathVariable("document") String document);
+
 //    @DeleteMapping("/{id}")
 //    String deleteClient(@PathVariable("id") Long id);
 }

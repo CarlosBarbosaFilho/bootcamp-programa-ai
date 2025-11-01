@@ -5,6 +5,7 @@ import br.com.programeai.rest.request.ClientRequest;
 import br.com.programeai.rest.response.ClientResponse;
 import br.com.programeai.service.domain.ClientDomain;
 import br.com.programeai.service.useCase.ICreateClientUseCase;
+import br.com.programeai.service.useCase.IfindClientByDocumentService;
 import br.com.programeai.utils.Utils;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class ClientController implements ClientsResources {
     private final Utils utils;
 
     private final ICreateClientUseCase createClientService;
+    private final IfindClientByDocumentService ifindClientByDocumentService;
 
 
     private final ConverterMapper converterMapper;
@@ -44,10 +46,10 @@ public class ClientController implements ClientsResources {
 //        return createResponse(this.findClientByEmailService.find(email));
 //    }
 //
-//    @Override
-//    public ClientResponse getClientDocument(String document) {
-//        return createResponse(this.findClientByDocumentService.find(document));
-//    }
+    @Override
+    public ClientResponse getClientDocument(String document) {
+        return createResponse(this.ifindClientByDocumentService.getClientDocument(document));
+    }
 //
 //    @Override
 //    public String deleteClient(Long id) {
