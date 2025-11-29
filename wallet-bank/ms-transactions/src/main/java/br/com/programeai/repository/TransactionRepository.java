@@ -1,0 +1,41 @@
+package br.com.programeai.repository;
+
+import br.com.programeai.model.TransactionEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
+@Repository
+public interface TransactionRepository extends JpaRepository<TransactionEntity, Long> {
+
+    TransactionEntity findTransactionByCodeTransaction(UUID codeTransaction);
+
+    @Query("SELECT t FROM TransactionEntity t " +
+            "WHERE (t.sourceWallet = :walletNumber OR t.destinationWallet = :walletNumber) " +
+            "AND t.createdAt <= :date " +
+            "AND t.statusTransaction = 'COMPLETED' " +
+            "ORDER BY t.createdAt DESC")
+    List<TransactionEntity> findLastCompletedTransactionUntilDate(@Param("walletNumber") String walletNumber,
+                                                                  @Param("date") LocalDateTime date);
+
+    List<TransactionEntity> findBySourceWalletAndCreatedAtBetween(
+            String walletNumber,
+            LocalDateTime startDate,
+            LocalDateTime endDate
+    );
+
+    @Query(value = "SELECT * FROM tb_transactions t WHERE t.destination_wallet = :wallet ORDER BY t.created_at DESC LIMIT 1",
+            nativeQuery = true)
+    TransactionEntity findTransactionByDestinationWallet(@Param("wallet") String wallet);
+
+    @Query(value = "SELECT * FROM tb_transactions t WHERE t.source_wallet = :wallet ORDER BY t.created_at DESC LIMIT 1",
+            nativeQuery = true)
+    TransactionEntity findTransactionBySourceWallet(@Param("wallet") String wallet);
+
+
+}

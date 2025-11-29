@@ -1,7 +1,10 @@
 package br.com.programeai.controller.api;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import br.com.programeai.controller.api.request.TransactionDeposit;
+import br.com.programeai.controller.api.request.TransactionTransfer;
+import br.com.programeai.controller.api.request.TransactionWithdraw;
+import br.com.programeai.controller.api.response.BalanceWalletResponse;
+import br.com.programeai.controller.api.response.TransactionConfirmedResponse;
 
 public interface TransactionsResources {
 
