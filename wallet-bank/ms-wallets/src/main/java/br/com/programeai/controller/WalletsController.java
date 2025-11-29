@@ -31,7 +31,8 @@ public class WalletsController implements  WalletsResource{
 
     @Override
     public String deposit(DepositRequest depositRequest) {
-        return "";
+        return this.performDepositWalletUseCase.performDeposit(depositRequest.getDestinationWallet(),
+                depositRequest.getAmount());
     }
 
     private WalletsDomain walletDomain(WalletRequest walletRequest) {

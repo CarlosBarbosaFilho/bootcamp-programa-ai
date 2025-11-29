@@ -23,8 +23,6 @@ public class PerformDepositUseCase implements PerformDepositWalletUseCase {
         var newBalance = wallet.getBalance().add(amount);
         wallet.setBalance(newBalance);
         this.walletsRepository.save(wallet);
-
         return "Deposit successfully";
-
     }
 }
