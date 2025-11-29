@@ -2,7 +2,7 @@ services:
 
   ## Postgres Databases
   postgres:
-    image: postgres:17.5
+    image: postgres:15
     container_name: wallet-bank-dev
     environment:
       POSTGRES_USER: postgres
@@ -50,8 +50,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - local-network
-
-
 volumes:
   postgres-data:
   pgadmin-data:

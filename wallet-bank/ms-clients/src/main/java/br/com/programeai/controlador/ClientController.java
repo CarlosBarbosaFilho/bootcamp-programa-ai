@@ -5,13 +5,11 @@ import br.com.programeai.rest.request.ClientRequest;
 import br.com.programeai.rest.response.ClientResponse;
 import br.com.programeai.service.domain.ClientDomain;
 import br.com.programeai.service.useCase.ICreateClientUseCase;
-import br.com.programeai.service.useCase.IfindClientByDocumentService;
+import br.com.programeai.service.useCase.IFindClientByDocumentService;
+import br.com.programeai.service.useCase.IFindClientByIdClient;
 import br.com.programeai.utils.Utils;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @AllArgsConstructor
@@ -20,8 +18,8 @@ public class ClientController implements ClientsResources {
     private final Utils utils;
 
     private final ICreateClientUseCase createClientService;
-    private final IfindClientByDocumentService ifindClientByDocumentService;
-
+    private final IFindClientByDocumentService ifindClientByDocumentService;
+    private final IFindClientByIdClient iFindClientByIdClient;
 
     private final ConverterMapper converterMapper;
 
@@ -36,10 +34,10 @@ public class ClientController implements ClientsResources {
 //        return listAllClientsService.listAll().stream().map(this::createResponse).toList();
 //    }
 //
-//    @Override
-//    public ClientResponse getClient(Long id) {
-//        return createResponse(this.findClientByIdService.find(id));
-//    }
+    @Override
+    public ClientResponse getClient(Long id) {
+        return createResponse(this.iFindClientByIdClient.getClientById(id));
+    }
 //
 //    @Override
 //    public ClientResponse getClientEmail(String email) {

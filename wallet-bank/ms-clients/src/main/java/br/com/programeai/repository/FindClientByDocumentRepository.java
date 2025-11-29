@@ -39,4 +39,9 @@ public class FindClientByDocumentRepository implements FindByClientDocumentRepos
                 .filter(c -> !c.getStatus().equals(StatusClient.INACTIVE))
                 .toList();
     }
+
+    @Override
+    public Client getClient(Long id) {
+        return clientTable.getItem(Key.builder().partitionValue(id).build());
+    }
 }

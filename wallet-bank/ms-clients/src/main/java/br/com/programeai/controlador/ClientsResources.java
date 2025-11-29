@@ -16,8 +16,8 @@ public interface ClientsResources {
 //    @GetMapping
 //    List<ClientResponse> list();
 
-//    @GetMapping("/{id}")
-//    ClientResponse getClient(@PathVariable("id") Long id);
+    @GetMapping("/{id}")
+    ClientResponse getClient(@PathVariable("id") Long id);
 //
 //    @GetMapping("/email/{email}")
 //    ClientResponse getClientEmail(@PathVariable("email") String email);
