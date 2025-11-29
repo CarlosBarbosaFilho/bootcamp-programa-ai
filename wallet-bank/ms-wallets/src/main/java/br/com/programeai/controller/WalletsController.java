@@ -1,9 +1,11 @@
 package br.com.programeai.controller;
 
+import br.com.programeai.controller.request.DepositRequest;
 import br.com.programeai.controller.request.WalletRequest;
 import br.com.programeai.controller.response.WalletResponse;
 import br.com.programeai.model.WalletStatus;
 import br.com.programeai.service.CreateWalletsService;
+import br.com.programeai.service.PerformDepositWalletUseCase;
 import br.com.programeai.service.WalletsDomain;
 import br.com.programeai.utils.Utils;
 import lombok.AllArgsConstructor;
@@ -18,12 +20,18 @@ import java.time.LocalDateTime;
 public class WalletsController implements  WalletsResource{
 
     private final CreateWalletsService service;
+    private final PerformDepositWalletUseCase performDepositWalletUseCase;
     private final Utils utils;
 
     @Override
     public WalletResponse create(WalletRequest request) {
         var domain = walletDomain(request);
         return walletResponse(this.service.create(domain));
+    }
+
+    @Override
+    public String deposit(DepositRequest depositRequest) {
+        return "";
     }
 
     private WalletsDomain walletDomain(WalletRequest walletRequest) {

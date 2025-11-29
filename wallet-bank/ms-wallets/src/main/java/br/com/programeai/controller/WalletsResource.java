@@ -1,5 +1,6 @@
 package br.com.programeai.controller;
 
+import br.com.programeai.controller.request.DepositRequest;
 import br.com.programeai.controller.request.WalletRequest;
 import br.com.programeai.controller.response.WalletResponse;
 import jakarta.validation.Valid;
@@ -12,5 +13,8 @@ public interface WalletsResource {
 
     @PostMapping
     WalletResponse create(@Valid @RequestBody WalletRequest request);
+
+    @PostMapping("/perform-deposit")
+    String deposit(@Valid @RequestBody DepositRequest depositRequest);
 
 }
