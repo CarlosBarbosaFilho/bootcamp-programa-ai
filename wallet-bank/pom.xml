@@ -12,6 +12,7 @@
     <modules>
         <module>ms-clients</module>
         <module>ms-wallets</module>
+        <module>ms-transactions</module>
     </modules>
 
     <properties>
