@@ -18,7 +18,7 @@ public interface TransactionRepository extends JpaRepository<TransactionEntity, 
     @Query("SELECT t FROM TransactionEntity t " +
             "WHERE (t.sourceWallet = :walletNumber OR t.destinationWallet = :walletNumber) " +
             "AND t.createdAt <= :date " +
-            "AND t.statusTransaction = 'COMPLETED' " +
+//            "AND t.statusTransaction = 'COMPLETED' " +
             "ORDER BY t.createdAt DESC")
     List<TransactionEntity> findLastCompletedTransactionUntilDate(@Param("walletNumber") String walletNumber,
                                                                   @Param("date") LocalDateTime date);
