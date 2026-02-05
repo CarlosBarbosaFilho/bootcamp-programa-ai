@@ -13,8 +13,10 @@
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/rest/response/ClientResponse.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/domain/ClientDomain.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/CreateClientUseCase.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/FindByClientByIdUseCase.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/FindByClientDocumentUseCase.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/ICreateClientUseCase.java
-/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/IfindClientByDocumentService.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/IFindClientByDocumentService.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/service/useCase/IFindClientByIdClient.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/utils/DynamoDbClientConfig.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-clients/src/main/java/br/com/programeai/utils/Utils.java

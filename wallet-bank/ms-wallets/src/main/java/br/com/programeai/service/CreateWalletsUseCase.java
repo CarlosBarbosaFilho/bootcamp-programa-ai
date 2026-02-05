@@ -17,6 +17,7 @@ public class CreateWalletsUseCase implements CreateWalletsService {
     @Override
     public WalletsDomain create(WalletsDomain walletsDomain) {
 
+        // O que ele faz ?
         var client = getClientToWallet.clientToWallet(walletsDomain.getClient());
         walletsDomain.setClient(client.getId());
         walletsDomain.setClientDocument(client.getDocument());

@@ -1,0 +1,574 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Wallet Assignment
+meta:
+  id: wrk_6fa119b0ecde48e885cc96d22e2d592b
+  created: 1755804376874
+  modified: 1755804376874
+  description: ""
+collection:
+  - name: WalletAssignmentService - hml
+    meta:
+      id: fld_2b10c5afcdbe46eeaa1132c848fea656
+      created: 1755622206211
+      modified: 1756133729827
+      sortKey: -1755622206211
+      description: ""
+    children:
+      - name: clients
+        meta:
+          id: fld_a70d2a79f84a418facedf6969648eada
+          created: 1755631620985
+          modified: 1755818935462
+          sortKey: -1755631626259
+          description: ""
+      - name: transactions
+        meta:
+          id: fld_2d59951006a64577ae9960c7a34bf92b
+          created: 1755631638773
+          modified: 1755818930223
+          sortKey: -1755631626359
+          description: ""
+      - name: wallets
+        meta:
+          id: fld_3bcaef54299244a899738e1c89e1d1c6
+          created: 1755631655011
+          modified: 1755631659855
+          sortKey: -1755631626459
+          description: ""
+  - name: WalletAssignmentService - dev
+    meta:
+      id: fld_702d9ff016704cb3af9ed3815e43428f
+      created: 1756133722215
+      modified: 1756133722215
+      sortKey: -1755325087118.5
+      description: ""
+    children:
+      - name: clients
+        meta:
+          id: fld_d4805c6d5d9447e88cc9c9d6dd17998b
+          created: 1756133722244
+          modified: 1756133722244
+          sortKey: -1755631626259
+          description: ""
+        children:
+          - url: http://localhost:8080/api/v1/clients
+            name: create clients
+            meta:
+              id: req_b7f1ad545d2e4564982e52f16d7d24c7
+              created: 1756133722245
+              modified: 1770248237056
+              isPrivate: false
+              description: ""
+              sortKey: -1754516921730
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"name": "Carlos Barbosa",
+                	"email": "cbgomes@gmail.com",
+                	"document":"06016687687",
+                	"income": 100
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/clients/1755800327418
+            name: delete client by id
+            meta:
+              id: req_6f775d3160d64917b8d845f557fa494d
+              created: 1756133722247
+              modified: 1764424429007
+              isPrivate: false
+              description: ""
+              sortKey: -1754516476488.25
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/clients/1764422793460
+            name: find client by id
+            meta:
+              id: req_95badd12f048405bbf80eaed394f6aab
+              created: 1756133722247
+              modified: 1764424258692
+              isPrivate: false
+              description: ""
+              sortKey: -1754516761798
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/clients
+            name: lista clients
+            meta:
+              id: req_3ba960023e5749e2934232bc7b70f4c6
+              created: 1756133722248
+              modified: 1770247987528
+              isPrivate: false
+              description: ""
+              sortKey: -1754515620559
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/api/v1/clients/document/03100721403
+            name: find client by document
+            meta:
+              id: req_2aa8efd24e494d7e9d42b8ee860e358d
+              created: 1756133722249
+              modified: 1762003504111
+              isPrivate: false
+              description: ""
+              sortKey: -1754515905868.75
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086api/v1/clients/email/belabela@gmail.com
+            name: find client by email
+            meta:
+              id: req_5af63a3399a1458bb9226179a86fcab3
+              created: 1756133722249
+              modified: 1760578757467
+              isPrivate: false
+              description: ""
+              sortKey: -1754516191178.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: transactions
+        meta:
+          id: fld_e46a6439737248e79cf7f729e4e503ae
+          created: 1756133722249
+          modified: 1756133722249
+          sortKey: -1755631626359
+          description: ""
+        children:
+          - url: http://localhost:8086/api/v1/transactions/check-balance
+            name: check balance - number
+            meta:
+              id: req_bcea7ed97b514e4aa3ef89b76b7b40da
+              created: 1756133722250
+              modified: 1760578704090
+              isPrivate: false
+              description: ""
+              sortKey: -1755683331362.5
+            method: GET
+            parameters:
+              - name: walletNumber
+                value: "0001"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/transactions/check-balance
+            name: check balance - number and date pass
+            meta:
+              id: req_d3f6d1c41c6c4161ba2642a337436444
+              created: 1756133722250
+              modified: 1760578708636
+              isPrivate: false
+              description: ""
+              sortKey: -1755725130789
+            method: GET
+            parameters:
+              - name: walletNumber
+                value: "0001"
+                description: ""
+                disabled: false
+              - name: datePass
+                value: 2025-08-21 22:59:00
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8082/api/v1/transactions/deposit
+            name: create deposit
+            meta:
+              id: req_9d552162c7c74386a9ce8d88e2446853
+              created: 1756847472241
+              modified: 1764440766962
+              isPrivate: false
+              description: ""
+              sortKey: -1754642396561.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"destinationWallet": "0001",
+                	"amountTransaction": 1000
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/transactions/transfer
+            name: create transfer
+            meta:
+              id: req_a404750a519d41be8ea4c06519552969
+              created: 1756847482495
+              modified: 1760578690984
+              isPrivate: false
+              description: ""
+              sortKey: -1754620767769.75
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"sourceWallet": "0001",
+                	"destinationWallet": "0002",
+                	"amountTransaction": 25
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/transactions/withdraw
+            name: create withdraw
+            meta:
+              id: req_bf1c742a84794fc6ac3e63389136aa6a
+              created: 1756847491602
+              modified: 1760578697419
+              isPrivate: false
+              description: ""
+              sortKey: -1754609953373.875
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"sourceWallet": "0001",
+                	"amountTransaction": 250
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: wallets
+        meta:
+          id: fld_12ad3a7a5ee94b2493244fb8a77a4b41
+          created: 1756133722251
+          modified: 1756133722251
+          sortKey: -1755631626459
+          description: ""
+        children:
+          - url: http://localhost:8081/api/v1/wallets
+            name: create wallet
+            meta:
+              id: req_2f83bdbc51c54434a1828d85731bfbac
+              created: 1756133722251
+              modified: 1770248307548
+              isPrivate: false
+              description: ""
+              sortKey: -1754585116785
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"walletNumber": "0001",
+                  "walletType":"SAVINGS",
+                	"client":"1770247469215"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/wallets/check-balance
+            name: check balance - number
+            meta:
+              id: req_be4aeb916276462dbc43f15337b4064f
+              created: 1756133722251
+              modified: 1760578721282
+              isPrivate: false
+              description: ""
+              sortKey: -1754599138878
+            method: GET
+            parameters:
+              - name: walletNumber
+                value: "0001"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/wallets/client-document
+            name: check balance - document
+            meta:
+              id: req_f9c961c037274971ac82ff3ed4ed3195
+              created: 1756133722252
+              modified: 1760578715593
+              isPrivate: false
+              description: ""
+              sortKey: -1755785129582
+            method: GET
+            parameters:
+              - name: document
+                value: "99999999999"
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8081/api/v1/wallets/perform-deposit
+            name: deposit wallet
+            meta:
+              id: req_20871591af204725a27fe56430064336
+              created: 1757338381762
+              modified: 1764434616019
+              isPrivate: false
+              description: ""
+              sortKey: -1754551099273.5
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"destinationWallet": "0001",
+                	"amount": 1000
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086api/v1/wallets/perform-withdraw
+            name: withdraw wallet
+            meta:
+              id: req_252ea8c4cc9f4178a05277d57cc892c3
+              created: 1757338396890
+              modified: 1760578730094
+              isPrivate: false
+              description: ""
+              sortKey: -1754534090517.75
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"sourceWallet": "0001",
+                	"amount": 100
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8086/api/v1/wallets/perform-transfer
+            name: transfer wallet
+            meta:
+              id: req_987d74d0fbb24d63ac8388e0ceb9371e
+              created: 1757338410249
+              modified: 1760578733997
+              isPrivate: false
+              description: ""
+              sortKey: -1754525586139.875
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"destinationWallet": "0002",
+                	"sourceWallet": "0001",
+                	"amount": 100
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.4.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: gateway
+        meta:
+          id: fld_f41fe794c641458eb8db751e62e28aae
+          created: 1760548607211
+          modified: 1760548607211
+          sortKey: -1760548607211
+          description: ""
+        children:
+          - url: http://localhost:8086/actuator
+            name: New Request
+            meta:
+              id: req_e82dd79d808444b295fd4c4d27fe1c69
+              created: 1760548628941
+              modified: 1760548652297
+              isPrivate: false
+              description: ""
+              sortKey: -1760548628941
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b4ffe3c16699f75ab87d5414f5ffc4fbbe497362
+    created: 1755804376881
+    modified: 1755804376881
+environments:
+  name: Base Environment
+  meta:
+    id: env_b4ffe3c16699f75ab87d5414f5ffc4fbbe497362
+    created: 1755804376880
+    modified: 1756062198536
+    isPrivate: false
+  data:
+    API_ID_DEV: mvq3ptixz0
+    API_ID_HML: bsf8oxt7k6
+    API_ID_PROD: bu99jojkyo

@@ -1,6 +1,7 @@
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/ApplicationWalletsService.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/controller/WalletsController.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/controller/WalletsResource.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/controller/request/DepositRequest.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/controller/request/WalletRequest.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/controller/response/WalletResponse.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/mapper/ConverterMapper.java
@@ -11,6 +12,8 @@
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/repository/WalletsRepository.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/CreateWalletsService.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/CreateWalletsUseCase.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/PerformDepositUseCase.java
+/Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/PerformDepositWalletUseCase.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/WalletsDomain.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/client/ClientResponse.java
 /Users/cbgomes/Desenvolvimento/bootcamp-programa-ai/wallet-bank/ms-wallets/src/main/java/br/com/programeai/service/client/GetClientToWallet.java
